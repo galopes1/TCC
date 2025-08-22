@@ -28,13 +28,14 @@ section{
     max-width: 1200px;
 }
 
-.header{
+.header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
     border-bottom: var(--border);
+    background-color: #000; /* ou rgba(0,0,0,0.8) para semi-transparente */
 }
 
 .header section{
@@ -78,17 +79,27 @@ section{
     display: inline-block;
 }
 
+.btn:hover{
+    letter-spacing: 0.1rem;
+    transition: 0.3s;
+}
+
 .home-container{
     background: url("./img/background4.png");
     background-position: center;
     background-size: cover;
+    min-height: calc(100vh - 100px); /* 100px é a altura da navbar */
+    padding-top: 100px;
 }
 
-.home-container section{
+
+.home-container section {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 100px); /* compensação da altura do header */
+    padding-top: 100px;
 }
+
 
 .content{
     max-width: 60rem;
@@ -102,7 +113,66 @@ section{
 .content p{
     color: #fff;
     font-size: 1.8rem;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.8;
     padding: 1rem 0;
 }
+
+.title{
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.title span{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+}
+
+.about .row .content{
+    padding: 2rem;
+
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: white;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: white;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+
+.address {
+    text-align: center;
+    padding: 40px;
+}
+
+.address iframe{
+    border-radius: 20px;
+}
+
+.rodape{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    border-top: var(--border);
+    padding: 20px;
+
+}
+
