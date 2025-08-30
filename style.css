@@ -46,18 +46,6 @@ section{
     padding-bottom: 0rem;
 }
 
-.navbar a{
-    margin: 0 1rem;
-    font-size: 1.8rem;
-    color: white;
-}
-
-.navbar a:hover{
-    color: var(--main-color);
-    border-bottom: 0.1rem solid var(--main-color);
-    padding-bottom: 0.5rem;
-    font-size: 2rem;
-}
 
 .icons img{
     margin: 1rem;
@@ -236,4 +224,138 @@ section{
     padding: 3rem;
 
 }
+.desktop-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* links centralizados e ícones à direita */
+    width: 100%;
+}
 
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center; /* centraliza links horizontalmente */
+    flex: 1;
+}
+
+.nav-links a {
+    font-size: 1.8rem;
+    color: white;
+    position: relative;
+    transition: 0.2s linear;
+}
+
+.nav-links a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* animação suave */
+}
+
+.nav-icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+
+/* Navbar lateral mobile */
+.mobile-navbar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+/* Navbar ativa */
+.mobile-navbar.active {
+    right: 0;
+}
+
+/* Fechar menu */
+.close-menu {
+    font-size: 3rem;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Container centralizado para links */
+.menu-links {
+    flex-grow: 1;               /* ocupa todo o espaço vertical restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     /* centraliza verticalmente */
+    align-items: center;         /* centraliza horizontalmente */
+    gap: 2rem;
+}
+
+.menu-links a {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.menu-links a:hover {
+    color: var(--main-color);
+}
+
+/* Ícones na parte inferior direita */
+.menu-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.menu-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .desktop-navbar {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
