@@ -321,13 +321,14 @@ section{
     color: var(--main-color);
 }
 
-/* Ícones na parte inferior direita */
+/* Ícones na parte inferior direita do menu hamburger */
 .menu-icons {
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
-    padding: 0 1rem;
+    padding: 1rem 1rem 2rem 1rem; /* topo, direita, baixo, esquerda */
 }
+
 
 .menu-icons img {
     width: 30px;
