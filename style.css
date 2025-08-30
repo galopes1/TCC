@@ -33,7 +33,7 @@ section{
     top: 0;
     left: 0;
     right: 0;
-    z-index: 99;
+    z-index: 99 ;
     border-bottom: var(--border);
     background-color: #000; /* ou rgba(0,0,0,0.8) para semi-transparente */
 }
@@ -43,7 +43,7 @@ section{
     align-items: center;
     justify-content: space-between;
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 0rem;
 }
 
 .navbar a{
@@ -85,11 +85,11 @@ section{
 }
 
 .home-container{
-    background: url("./img/background4.png");
-    background-position: center;
-    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(135deg, #141414, #2a2f3a);
     min-height: calc(100vh - 100px); /* 100px é a altura da navbar */
-    padding-top: 100px;
 }
 
 
@@ -98,6 +98,17 @@ section{
     align-items: center;
     min-height: calc(100vh - 100px); /* compensação da altura do header */
     padding-top: 100px;
+}
+
+.img-home{
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.img-home img{
+    border-radius: 20px;
+    width: 533px;
+    height: 400px;
 }
 
 
@@ -155,6 +166,56 @@ section{
     line-height: 1.8;
 }
 
+.catalog {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.grid-catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+}
+
+.grid-catalog .box {
+  background: var(--black);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.136);
+}
+
+.grid-catalog .box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.grid-catalog .box h3 {
+  color: var(--main-color);
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.grid-catalog .box p {
+  color: #fff;
+  font-size: 1.4rem;
+  padding-bottom: 3rem;
+}
+
+.grid-catalog .box:hover {
+  transform: translateY(-4px);
+}
+
+.grid-catalog .box .btn:hover{
+    background-color: darkred;
+    letter-spacing: normal;
+    transition: 0.3s;
+}
+
 
 .address {
     text-align: center;
@@ -167,12 +228,12 @@ section{
 
 .rodape{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: white;
     text-align: center;
     border-top: var(--border);
-    padding: 20px;
+    padding: 3rem;
 
 }
 
