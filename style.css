@@ -130,7 +130,7 @@ section{
     text-transform: uppercase;
 }
 
-.about, .carrinho .row{
+.about .row{
     display: flex;
     align-items: center;
     background-color: var(--black);
