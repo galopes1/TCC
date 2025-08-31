@@ -374,15 +374,27 @@ section{
 /* Tablets e telas médias */
 @media (max-width: 1024px) {
     .home-container {
-        flex-direction: column;
+        flex-direction: column; /* empilha */
         text-align: center;
         padding: 2rem;
     }
 
+    /* Texto primeiro, imagem depois */
+    .home-container .content {
+        order: 1;
+    }
+
+    .home-container .img-home {
+        order: 2;
+    }
+
+    /* Imagem mais destacada */
     .img-home img {
-        width: 100%;
+        width: 90%;
+        max-width: 600px;
         height: auto;
-        max-width: 500px;
+        margin: 0 auto;
+        display: block;
     }
 
     .content h3 {
@@ -461,36 +473,10 @@ section{
         padding: 2rem;
     }
 
+    /* Imagem do home um pouco menor */
     .img-home img {
-        width: 100%; /* ocupa toda largura possível */
-        max-width: 450px;
+        display: none;
     }
-
-     .home-container {
-        flex-direction: column; /* empilha */
-        text-align: center;
-        padding: 2rem;
-    }
-
-    /* Forçar o texto vir antes e a imagem depois */
-    .home-container .content {
-        order: 1;
-    }
-
-    .home-container .img-home {
-        order: 2;
-    }
-
-    /* Garantir que a imagem fique maior e não encolha demais */
-    .img-home img {
-        width: 90%;
-        max-width: 600px; /* imagem mais destacada */
-        height: auto;
-        margin: 0 auto; /* centraliza */
-        display: block;
-    }
-}
-
 }
 
 /* Celulares muito pequenos */
@@ -511,5 +497,9 @@ section{
     .title {
         font-size: 2.4rem;
     }
-}
 
+    /* Esconde imagem do home em telas muito pequenas */
+    .home-container .img-home {
+        display: none;
+    }
+}
