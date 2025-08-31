@@ -368,3 +368,148 @@ section{
         display: flex;
     }
 }
+
+/* ================== RESPONSIVIDADE ================== */
+
+/* Tablets e telas médias */
+@media (max-width: 1024px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .img-home img {
+        width: 100%;
+        height: auto;
+        max-width: 500px;
+    }
+
+    .content h3 {
+        font-size: 3rem;
+    }
+
+    .content p {
+        font-size: 1.6rem;
+    }
+
+    .grid-catalog {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .row .container-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .home-container section {
+        padding-top: 80px; /* compensar header menor */
+    }
+
+    .content h3 {
+        font-size: 2.4rem;
+    }
+
+    .content p {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .grid-catalog {
+        grid-template-columns: 1fr; /* apenas 1 coluna */
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .about .row {
+        gap: 2rem;
+    }
+
+    .about .row .content h3 {
+        font-size: 2.2rem;
+    }
+
+    .about .row .content p {
+        font-size: 1.4rem;
+    }
+
+    .address iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    .rodape {
+        font-size: 1.2rem;
+        padding: 2rem;
+    }
+
+    .img-home img {
+        width: 100%; /* ocupa toda largura possível */
+        max-width: 450px;
+    }
+
+     .home-container {
+        flex-direction: column; /* empilha */
+        text-align: center;
+        padding: 2rem;
+    }
+
+    /* Forçar o texto vir antes e a imagem depois */
+    .home-container .content {
+        order: 1;
+    }
+
+    .home-container .img-home {
+        order: 2;
+    }
+
+    /* Garantir que a imagem fique maior e não encolha demais */
+    .img-home img {
+        width: 90%;
+        max-width: 600px; /* imagem mais destacada */
+        height: auto;
+        margin: 0 auto; /* centraliza */
+        display: block;
+    }
+}
+
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 480px) {
+    .content h3 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1.3rem;
+        padding: 0.7rem 1.5rem;
+    }
+
+    .title {
+        font-size: 2.4rem;
+    }
+}
+
