@@ -130,7 +130,7 @@ section{
     text-transform: uppercase;
 }
 
-.about .row{
+.about, .carrinho .row{
     display: flex;
     align-items: center;
     background-color: var(--black);
@@ -251,6 +251,14 @@ section{
     padding-bottom: 0.5rem;
     font-size: 2rem;
 }
+
+.nav-links .active{
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
 
 .nav-icons {
     display: flex;
