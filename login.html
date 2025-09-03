@@ -2,56 +2,95 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="img/ARMendonca2.png" type="image/png" />
-    <link href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="login.css" />
-    <title>Login | AR Mendonça</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/ARMendonca2.png" type="image/png" />
+  <link href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="login.css" />
+  <title>Login | AR Mendonça</title>
 </head>
 
 <body>
-    <header class="header">
-        <a href="#" class="logo">
-            <img src="img/ARMendoncamenor.png" alt="" />
-        </a>
-    </header>
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="img/ARMendoncamenor.png" alt="" />
+    </a>
+  </header>
 
-    <form method="POST" id="form-login">
-        <div class="wrapper">
-            <div class="login_box">
-                <div class="login-header">
-                    <span>Login</span>
-                </div>
-                <div class="input_box">
-                    <input type="email" name="email" id="email" class="input-field" required />
-                    <label for="email" class="label">Email</label>
-                    <i class="bx bx-user icon"></i>
-                </div>
-                <div class="input_box">
-                    <input type="password" name="password" id="password" class="input-field" required />
-                    <label for="password" class="label">Senha</label>
-                    <i class="bx bx-lock icon"></i>
-                </div>
-                <div class="remember-forgot">
-                    <div class="remember-me">
-                        <input type="checkbox" id="remember" />
-                        <label for="remember">Lembrar da senha</label>
-                    </div>
-                    <div class="forgot">
-                        <a href="#">Esqueci minha senha</a>
-                    </div>
-                </div>
-                <div class="input_box">
-                    <input type="submit" class="input-submit" value="Login" />
-                </div>
-                <div class="register">
-                    <span>Não tem uma conta? <a href="#">Registre-se</a></span>
-                </div>
-            </div>
+  <!-- Formulário Login -->
+  <form method="POST" id="form-login">
+    <div class="wrapper">
+      <div class="login_box">
+        <div class="login-header">
+          <span>Login</span>
         </div>
-    </form>
-    <script src="login.js"></script>
+        <div class="input_box">
+          <input type="email" name="email" id="email" class="input-field" required />
+          <label for="email" class="label">Email</label>
+          <i class="bx bx-user icon"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" name="password" id="password" class="input-field" required />
+          <label for="password" class="label">Senha</label>
+          <i class="bx bx-lock icon"></i>
+        </div>
+        <div class="remember-forgot">
+          <div class="remember-me">
+            <input type="checkbox" id="remember" />
+            <label for="remember">Lembrar da senha</label>
+          </div>
+          <div class="forgot">
+            <a href="#">Esqueci minha senha</a>
+          </div>
+        </div>
+        <div class="input_box">
+          <input type="submit" class="input-submit" value="Login" />
+        </div>
+        <div class="register">
+          <span>Não tem uma conta? <a href="#" onclick="showRegister()">Registre-se</a></span>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <!-- Formulário Registro -->
+  <form method="POST" id="form-register" style="display: none;">
+    <div class="wrapper2">
+      <div class="login_box">
+        <div class="login-header2">
+          <span>Registro</span>
+        </div>
+        <div class="input_box">
+          <input type="text" name="fullname" id="fullname" class="input-field" required />
+          <label for="fullname" class="label">Nome Completo</label>
+          <i class="bx bx-user icon"></i>
+        </div>
+        <div class="input_box">
+          <input type="email" name="email" id="reg-email" class="input-field" required />
+          <label for="reg-email" class="label">Email</label>
+          <i class="bx bx-envelope icon"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" name="password" id="reg-password" class="input-field" required />
+          <label for="reg-password" class="label">Senha</label>
+          <i class="bx bx-lock icon"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" name="confirm-password" id="confirm-password" class="input-field" required />
+          <label for="confirm-password" class="label">Confirmar Senha</label>
+          <i class="bx bx-lock icon"></i>
+        </div>
+        <div class="input_box">
+          <input type="submit" class="input-submit" value="Registrar" />
+        </div>
+        <div class="register">
+          <span>Já tem uma conta? <a href="#" onclick="showLogin()">Faça login</a></span>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <script src="login.js"></script>
 </body>
 
 </html>
